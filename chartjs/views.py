@@ -8,7 +8,7 @@ def viewchart(request):
     labels=[]
     data=[]
 
-    profile=Profile.objects.order_by('name')[:9]
+    profile=Profile.objects.order_by('name')[:90]
     for i in profile:
         labels.append(i.name)
         data.append(i.figure)
