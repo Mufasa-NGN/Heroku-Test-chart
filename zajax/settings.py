@@ -77,17 +77,33 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'zajax.wsgi.application'
+# WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# This is for LOCALHOST
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dcriaq699mcllq' ,
+        'USER': 'zgozjdrvfdqlme' ,
+        'PASSWORD': '8c69563663542afb45310648dbeaa3be53175024c30ba759c4982697af788185' ,
+        'HOST': 'ec2-52-31-201-170.eu-west-1.compute.amazonaws.com' ,
+        'PORT': '5432' ,
     }
 }
+
+
 
 
 # Password validation
